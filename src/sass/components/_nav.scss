@@ -1,0 +1,13 @@
+.nav {
+    display: flex;
+
+    > &__item a {
+        &:hover {
+            
+        }
+    }
+
+    &__sub {
+        display: none;
+    }
+}

@@ -1,0 +1,21 @@
+body {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Rubik', sans-serif;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    color: $mainColor;
+    transition: all .5s;
+
+    &:hover {
+        color: darken($mainColor, 20%)
+    }
+}

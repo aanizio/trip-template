@@ -1,0 +1,38 @@
+extends ../layout/layout.pug
+
+block title
+    - var title = "Homepage"
+
+block page_content
+    .header-container
+        .header-bg
+        header.header
+            .main-container
+                h1.logo= siteTitle
+                nav.nav.main-nav
+                    .nav__item
+                        a(href="#") Home
+                        nav.nav__sub
+                            .nav__item
+                                a(href="#") Item 1
+                            .nav__item
+                                a(href="#") Item 2
+                    .nav__item
+                        a(href="#") Pages
+                nav.nav.side-nav
+                    .nav__item
+                        a(href="#") Sign Up
+                    .nav__item
+                        a(href="#") Sign In
+                    .nav__item.nav__item--featured
+                        a(href="#") Add Listing
+        section.hero
+            .main-container
+                .desc
+                    h2 Find amazing places for the right price.
+                    h3 Discover your next travel.
+                .discover
+                    input(type="text", name="")
+                    input(type="button", value="Search")
+
+    p Aliqua commodo laboris eiusmod velit sunt et. Laborum officia sunt mollit excepteur adipisicing anim esse.

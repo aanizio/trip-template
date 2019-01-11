@@ -1,0 +1,9 @@
+block page_lang_code
+    - var pageLangCode = ""
+
+doctype html
+html(lang=(pageLangCode || siteLangCode))
+    include ../includes/head.pug
+    body
+        block page_content
+            p Replace this block of content
