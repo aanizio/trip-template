@@ -10,7 +10,8 @@ const { src, dest, series, watch } = require('gulp'),
   postcss = require('gulp-postcss'),
   cssnano = require('gulp-cssnano'),
   rename = require('gulp-rename'),
-  autoprefixer = require('autoprefixer');
+  autoprefixer = require('autoprefixer'),
+  imagemin = require('gulp-imagemin');
 
 function cleanDistDir() {
   return src('dist/', {read: false, allowEmpty: true})
@@ -51,6 +52,9 @@ function buildCSS() {
 
 function buildImages() {
   return src('src/images/*')
+    .pipe(imagemin({
+      verbose: true,
+    }))
     .pipe(dest('dist/images'));
 }
 
