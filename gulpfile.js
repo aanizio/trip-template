@@ -11,7 +11,8 @@ const { src, dest, series, watch } = require('gulp'),
   cssnano = require('gulp-cssnano'),
   rename = require('gulp-rename'),
   autoprefixer = require('autoprefixer'),
-  imagemin = require('gulp-imagemin');
+  imagemin = require('gulp-imagemin'),
+  newer = require('gulp-newer');
 
 function cleanDistDir() {
   return src('dist/', {read: false, allowEmpty: true})
@@ -52,19 +53,21 @@ function buildCSS() {
 
 function buildImages() {
   return src('src/images/*')
+    .pipe(newer('dist/images'))
     .pipe(imagemin({
       verbose: true,
     }))
     .pipe(dest('dist/images'));
 }
 
-const buildSite = series(cleanDistDir, buildHTML, buildCSS, buildImages);
-
 function serveAndWatch() {
   browserSync();
   watch('src/**/*', buildSite);
 }
 
+const buildSite = series(buildHTML, buildCSS, buildImages);
+
 exports.default = buildSite;
 exports.serve = browserSync;
 exports.watch = serveAndWatch;
+exports.clean = cleanDistDir;
