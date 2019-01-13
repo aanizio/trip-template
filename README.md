@@ -9,6 +9,7 @@ Technologies and features I use on this template:
 - Pug Template Engine
 - CSS Flexbox and Grid Layout
 - SASS
+- Accessibily
 
 ## Install
 
