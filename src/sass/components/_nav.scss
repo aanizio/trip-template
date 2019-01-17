@@ -1,13 +1,75 @@
 .nav {
     display: flex;
+    align-items: center;
 
-    > &__item a {
-        &:hover {
-            
+    // Nav item
+    & > &__item {
+        position: relative;
+        padding: 20px 0;
+
+        // Nav item link
+        > a {
+            padding: 20px 10px;
+            text-decoration: none;
+            color: white;
+            transition-property: color;
+
+            &:hover {
+                box-shadow: inset 0 -1px white;
+            }
+        }
+
+        // Active nav item
+        &--active > a {
+            box-shadow: inset 0 -1px white;
+        }
+
+        // Featured nav item
+        &--featured {
+            background: white;
+
+            > a {
+                color: #666;
+                box-shadow: inset 0 -1px white;
+
+                &:hover {
+                    color: $mainColor;
+                }
+            }
         }
     }
 
+    // Nav submenu
     &__sub {
-        display: none;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background: white;
+        padding: 15px 20px;
+        border-top: 2px solid $mainColor;
+        width: 100%;
+        z-index: 1;
+        transition: opacity .1s;
+
+        a {
+            text-decoration: none;
+            color: lighten($generalFontColor, 20%);
+
+            &:hover {
+                color: $mainColor;
+            }
+        }
+    }
+
+    &__sub &__item + &__item {
+        margin-top: 10px;
+    }
+
+    // Make submenu visible
+    &__item:hover &__sub {
+        visibility: visible;
+        opacity: 1;
     }
 }

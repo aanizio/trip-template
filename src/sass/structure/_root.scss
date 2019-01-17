@@ -1,9 +1,10 @@
 body {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: $generalFontColor;
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .main-container {
@@ -12,10 +13,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 a {
-    color: $mainColor;
+    color: $linksColor;
     transition: all .5s;
 
     &:hover {
-        color: darken($mainColor, 20%)
+        color: $hoveredLinksColor;
     }
 }

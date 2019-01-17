@@ -1,0 +1,93 @@
+.hero {
+    padding: 140px 0 200px 0;
+
+    > * {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+}
+
+.hero-desc {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero-search {
+    display: flex;
+    background: white;
+    border-radius: 100px;
+    opacity: .8;
+    transition: all .3s;
+    cursor: text;
+
+    &:hover,
+    &:focus-within {
+        opacity: 1;
+    }
+
+    input {
+        border: none;
+        width: 300px;
+        margin: 14px 20px;
+
+        &::placeholder {
+            color: transparentize($generalFontColor, 0.5);
+            opacity: 1;
+        }
+    }
+
+    button {
+        border: 2px solid $mainColor;
+        border-radius: 0 100px 100px 0;
+        padding: 0 22px;
+        background: $mainColor;
+        color: white;
+        cursor: pointer;
+        transition: all .3s;
+
+        i {
+            margin-right: 5px;
+        }
+
+        &:hover {
+            color: white;
+            background: lighten($mainColor, 10%)
+        }
+    }
+}
+
+.hero-inputs {
+    
+    border-radius: 100px;
+    padding: 10px 20px;
+
+    $inputColor: transparentize($generalFontColor, 0.5);
+
+    input, select {
+        border: none;
+    }
+
+    select {
+        color: $inputColor;
+        appearance: none;
+    }
+
+    // FIX to IE
+    select::-ms-expand { 
+        display: none; /* hide the default arrow in ie10 and ie11 */
+    }
+
+    input[type='text'] {
+        border-right: 1px solid #ccc;
+        width: 300px;
+
+        &::placeholder {
+            color: $inputColor;
+            opacity: 1;
+        }
+    }
+}

@@ -4,35 +4,32 @@ block title
     - var title = "Homepage"
 
 block page_content
-    .header-container
+    section.header-container
         .header-bg
         header.header
             .main-container
-                h1.logo= siteTitle
+                h1.logo
+                    a(href="#") #[i.fas.fa-map-marked] #[=siteTitle]
                 nav.nav.main-nav
-                    .nav__item
+                    .nav__item.nav__item--active
                         a(href="#") Home
                         nav.nav__sub
-                            .nav__item
-                                a(href="#") Item 1
-                            .nav__item
-                                a(href="#") Item 2
+                            each index in [0,1,2]
+                                .nav__item
+                                    a(href="#") Item #{index}
                     .nav__item
                         a(href="#") Pages
                 nav.nav.side-nav
                     .nav__item
                         a(href="#") Sign Up
-                    .nav__item
-                        a(href="#") Sign In
                     .nav__item.nav__item--featured
-                        a(href="#") Add Listing
-        section.hero
+                        a(href="#") Sign In
+        .hero
             .main-container
-                .desc
+                .hero-desc
                     h2 Find amazing places for the right price.
                     h3 Discover your next travel.
-                .discover
-                    input(type="text", name="")
-                    input(type="button", value="Search")
-
+                label.hero-search(for="hero-search")
+                    input#hero-search(type="text", placeholder="What are you looking for?")
+                    button #[i.fas.fa-search] Search
     p Aliqua commodo laboris eiusmod velit sunt et. Laborum officia sunt mollit excepteur adipisicing anim esse.

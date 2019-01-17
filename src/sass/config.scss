@@ -1,3 +1,8 @@
-$mainColor: #f34949;
+$mainColor: #ffaa00;
 
-$heroBgImg: '../images/hero-bg-1500x843.jpg';
+$linksColor: $mainColor;
+$hoveredLinksColor: darken($linksColor, 20%);
+
+$generalFontColor: #333;
+
+$heroBgImg: '../images/hero-bg-2.jpg';
