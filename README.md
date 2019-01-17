@@ -35,3 +35,5 @@ To serve and watch for changes:
 
 - Photos on [Unsplash](https://unsplash.com/) by:
   - [Oliver Ash](https://unsplash.com/@oliverjash)
+  - [Lonely Planet](https://unsplash.com/@lonely_planet)
+  - [Toa Heftiba](https://unsplash.com/@heftiba)
