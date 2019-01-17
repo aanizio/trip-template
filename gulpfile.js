@@ -62,6 +62,7 @@ function buildImages() {
 
 function serveAndWatch() {
   browserSync();
+  buildSite();
   watch('src/**/*', buildSite);
 }
 
