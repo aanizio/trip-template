@@ -1,0 +1,38 @@
+.section_categories {
+    padding: 70px 0;
+
+    > * {
+        display: flex;
+    }
+}
+
+.category__item {
+    flex-grow: 1;
+    border: 3px inset solid lighten(black, 70%);
+    border-radius: 7px;
+    text-align: center;
+    padding: 50px 20px;
+    text-decoration: none;
+    color: $generalFontColor;
+    transition: all .3s;
+
+    &:hover {
+        border-color: $mainColor;
+        background: lighten($mainColor, 45%);
+        // color: white;
+        color: $mainColor;
+    }
+
+    & + & {
+        margin-left: 20px;
+    }
+
+    i {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    h4 {
+        margin: 0;
+    }
+}
