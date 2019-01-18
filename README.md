@@ -37,3 +37,6 @@ To serve and watch for changes:
   - [Oliver Ash](https://unsplash.com/@oliverjash)
   - [Lonely Planet](https://unsplash.com/@lonely_planet)
   - [Toa Heftiba](https://unsplash.com/@heftiba)
+  - [Vita Vilcina](https://unsplash.com/@vivivi)
+  - [Nichlas Andersen](https://unsplash.com/@itsnwa)
+  - [Rhema Kallianpur](https://unsplash.com/@rhemakallianpur)

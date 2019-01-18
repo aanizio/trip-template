@@ -3,6 +3,20 @@ extends ../layout/layout.pug
 block title
     - var title = "Homepage"
 
+mixin placeItem(title, imagePath, oldPrice, newPrice, ...categories)
+    - var fromPrice = "From <del>$" + oldPrice + "</del>";
+    - var newPrice = "$" + newPrice + " <small>/night</small>";
+    .places__item
+        img(src= imagePath)
+        .places__details
+            a(href="").places__title= title
+            .places__categories
+                each ctg in categories
+                    a(href="#")= ctg
+            .places__divider
+            .places__old-price !{fromPrice}
+            .places__new-price !{newPrice}
+
 block page_content
     section.header-container
         .header-bg
@@ -32,7 +46,7 @@ block page_content
                 label.hero-search(for="hero-search")
                     input#hero-search(type="text", placeholder="What are you looking for?")
                     button #[i.fas.fa-search] Search
-    section.section_categories
+    section.section.section-categories.section--padding
         .main-container
             a(href="#").category__item
                 i.far.fa-futbol
@@ -49,4 +63,13 @@ block page_content
             a(href="#").category__item
                 i.fas.fa-child
                 h4 Family
+    section.section.section-places.section--grey.section--padding
+        .main-container
+            h2 Top Trending Places
+            .divider
+            .places
+                +placeItem('Grand Flex Hotel', '../images/place-1.jpg', 500, 400, 'Argentina', 'South America')
+                +placeItem('Bravo Hotel', '../images/place-2.jpg', 300, 250, 'Rome', 'Italy', 'Europe')
+                +placeItem('American Way Hotel', '../images/place-3.jpg', 150, 100, 'California', 'USA', 'North America')
+
     p Aliqua commodo laboris eiusmod velit sunt et. Laborum officia sunt mollit excepteur adipisicing anim esse.
