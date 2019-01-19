@@ -7,10 +7,20 @@
 .places__item {
     background: white;
 
+    &:hover .places__image img {
+        transform: scale(1.05);
+    }
+}
+
+.places__image {
+    background: lighten(black, 90%);
+    height: 250px;
+    width: 100%;
+    overflow: hidden;
+
     img {
-        background: lighten(black, 90%);
-        height: 200px;
         width: 100%;
+        transition: all 1s;
     }
 }
 

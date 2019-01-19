@@ -7,7 +7,8 @@ mixin placeItem(title, imagePath, oldPrice, newPrice, ...categories)
     - var fromPrice = "From <del>$" + oldPrice + "</del>";
     - var newPrice = "$" + newPrice + " <small>/night</small>";
     .places__item
-        img(src= imagePath)
+        .places__image
+            img(src= imagePath)
         .places__details
             a(href="").places__title= title
             .places__categories
