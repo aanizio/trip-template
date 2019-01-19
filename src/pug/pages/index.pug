@@ -47,8 +47,8 @@ block page_content
                 label.hero-search(for="hero-search")
                     input#hero-search(type="text", placeholder="What are you looking for?")
                     button #[i.fas.fa-search] Search
-    section.section.section-categories.section--padding
-        .main-container
+    section.section.section-categories
+        .main-container.main-container--padding
             a(href="#").category__item
                 i.far.fa-futbol
                 h4 Sport
@@ -64,13 +64,12 @@ block page_content
             a(href="#").category__item
                 i.fas.fa-child
                 h4 Family
-    section.section.section-places.section--grey.section--padding
-        .main-container
+    section.section.section-places.section--grey
+        .main-container.main-container--padding
             h2 Top Trending Places
             .divider
             .places
                 +placeItem('Grand Flex Hotel', '../images/place-1.jpg', 500, 400, 'Argentina', 'South America')
                 +placeItem('Bravo Hotel', '../images/place-2.jpg', 300, 250, 'Rome', 'Italy', 'Europe')
                 +placeItem('American Way Hotel', '../images/place-3.jpg', 150, 100, 'California', 'USA', 'North America')
-
-    p Aliqua commodo laboris eiusmod velit sunt et. Laborum officia sunt mollit excepteur adipisicing anim esse.
+    include ../includes/footer.pug

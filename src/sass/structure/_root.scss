@@ -16,6 +16,10 @@ h1,h2,h3,h4,h5,h6 {
     margin: 0 auto;
 }
 
+.main-container--padding {
+    padding: 70px 0;    
+}
+
 a {
     color: $linksColor;
     transition: all .5s;
@@ -23,10 +27,6 @@ a {
     &:hover {
         color: $hoveredLinksColor;
     }
-}
-
-.section--padding {
-    padding: 70px 0;
 }
 
 .section--grey {
