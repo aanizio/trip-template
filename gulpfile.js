@@ -2,7 +2,6 @@
 
 const { src, dest, series, watch } = require('gulp'),
   pug = require('gulp-pug'),
-  pugLocals = require('./src/_data/site.json'),
   clean = require('gulp-clean'),
   bSync = require('browser-sync').create(),
   sass = require('gulp-sass'),
@@ -28,9 +27,10 @@ function browserSync() {
 }
 
 function buildHTML() {
+  delete require.cache[require.resolve('./src/_data/site.js')];
   return src('src/pug/pages/*.pug')
     .pipe(pug({
-      locals: pugLocals,
+      locals: require('./src/_data/site.js'),
       pretty: true,
     }))
     .pipe(dest('dist/'))
